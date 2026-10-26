@@ -1,7 +1,16 @@
 (() => {
   const header = document.querySelector('.header');
   const links = [...header.querySelectorAll('nav a')];
-  const portfolio = document.body.dataset.page === 'portfolio';
+  const currentPage = document.body.dataset.page || 'home';
+  const menu = header.querySelector('nav');
+  const toggle = document.getElementById('menu-toggle');
+  function closeMenu(){menu.classList.remove('is-open');toggle?.setAttribute('aria-expanded','false');}
+  toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';menu.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));});
+  links.forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&toggle?.getAttribute('aria-expanded')==='true'){closeMenu();toggle.focus();}});
+  document.addEventListener('click',event=>{if(!header.contains(event.target))closeMenu();});
+  window.addEventListener('resize',()=>{if(window.innerWidth>760)closeMenu();});
+  if(currentPage==='home'&&['#pricing','#contact'].includes(location.hash)){location.replace(location.hash==='#pricing'?'pricing.html':'contact.html');return;}
   const sections = links.map(link => {
     const url = new URL(link.href);
     const id = url.hash.slice(1);
@@ -17,8 +26,8 @@
     });
   }
 
-  if (portfolio) {
-    select(links.find(link => new URL(link.href).pathname.endsWith('/portfolio.html')), 'page');
+  if (currentPage !== 'home') {
+    select(links.find(link => link.dataset.navPage === currentPage), 'page');
     return;
   }
 

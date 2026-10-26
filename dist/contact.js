@@ -3,6 +3,8 @@ import { contactEndpoint, requestPayload, sendRequest } from './contact-api.js';
 
 const form=document.getElementById('contact-form');
 if(form){
+  const requestedPlan=new URLSearchParams(location.search).get('plan');
+  if(['starter','standard','premium'].includes(requestedPlan))document.getElementById('request-plan').value=requestedPlan;
   const endpoint=contactEndpoint(FORM_ENDPOINT);
   const button=document.getElementById('request-submit'), label=document.getElementById('request-submit-label'), status=document.getElementById('contact-status'), fields=document.getElementById('request-fields');
   const messages={

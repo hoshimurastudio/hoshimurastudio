@@ -1,6 +1,6 @@
 # Hoshimura Studio
 
-Website studio untuk jasa **Video Editing** dan **Web Design**. Bahasa Jepang menjadi default pada kunjungan pertama, dengan pilihan English dan dark/light mode. Pilihan pengunjung disimpan di browser.
+Website studio yang saat ini menerima pesanan **Web Design / pembuatan website** saja. **Video Editing** berstatus coming soon dan tidak dapat dipilih pada form. Bahasa Jepang menjadi default pada kunjungan pertama, dengan pilihan English dan dark/light mode. Pilihan pengunjung disimpan di browser.
 
 ## Jalankan di localhost
 
@@ -29,20 +29,22 @@ npm run check
 ## Struktur dan pengeditan
 
 - `dist/index.html`: struktur halaman dan teks Jepang.
+- `dist/pricing.html`: halaman harga website, rincian opsi, dan unduhan PDF asli.
+- `dist/contact.html`: halaman form permintaan website, dengan pilihan paket opsional.
 - `dist/portfolio.html`: halaman portofolio dengan kategori Video Editing dan Web Design. Kedua kategori sengaja kosong sampai karya siap dipublikasikan.
 - `dist/app.js`: teks English serta pengaturan bahasa dan tema.
 - `dist/contact.js` dan `dist/contact-api.js`: validasi, pengiriman form, dan status pengiriman.
 - `dist/contact-config.js`: endpoint publik Formspree. Email penerima diatur hanya di dashboard Formspree.
 - `dist/style.css`: tampilan, responsivitas, dan pemotongan logo.
 - `dist/assets/`: logo PNG asli yang Anda berikan.
-- `dist/assets/documents/Hoshimura_Studio_Price_List_JP_EN.pdf`: PDF harga asli dari pemilik, tanpa perubahan isi. Harga paket, jenis website, opsi, dan ketentuan ditampilkan pada `index.html#pricing` dalam bahasa Jepang/Inggris. Angka adalah estimasi JPY dari panduan Oktober 2026.
+- `dist/assets/documents/Hoshimura_Studio_Price_List_JP_EN.pdf`: PDF harga asli dari pemilik, tanpa perubahan isi. Harga paket, jenis website, opsi, dan ketentuan ditampilkan pada `pricing.html` dalam bahasa Jepang/Inggris. Angka adalah estimasi JPY dari panduan Oktober 2026.
 - `server.mjs`: server preview lokal tanpa dependency.
 
-Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Form pemesanan berada di `index.html#contact`. Font Google menggunakan internet; jika offline, browser memakai font sistem.
+Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Form pemesanan berada di `contact.html`. Link lama `index.html#contact` dan `index.html#pricing` dialihkan ke halaman baru. Font Google menggunakan internet; jika offline, browser memakai font sistem.
 
 ## Form permintaan jasa
 
-Form meminta jenis jasa, nama dan email klien, perusahaan/nama kreator, anggaran, target waktu, rincian proyek, dan tautan referensi. Klien menyetujui pemakaian data untuk menangani permintaan. Tidak ada pembayaran atau kontrak otomatis.
+Form menetapkan jenis jasa sebagai Web Design. Klien dapat memilih Starter, Standard, Premium Static, atau mendiskusikan paketnya. Tombol pada halaman harga membawa pilihan paket ke form. Nama dan email klien, perusahaan/nama kreator, anggaran, target waktu, rincian website, dan tautan referensi dikirim bersama pilihan paket. Validator menolak pilihan Video Editing, paket gabungan, dan layanan selain website. Klien menyetujui pemakaian data untuk menangani permintaan. Tidak ada pembayaran atau kontrak otomatis.
 
 Pengiriman menggunakan endpoint Formspree di `dist/contact-config.js`. Endpoint tersebut merupakan ID form publik, bukan email penerima atau API key rahasia. Alamat email penerima tidak dimasukkan ke source. Atur dan verifikasi alamat penerima di dashboard Formspree; kolom `email` dari klien menjadi alamat Reply-To untuk membalas permintaan.
 

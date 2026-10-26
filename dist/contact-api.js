@@ -7,11 +7,13 @@ export function contactEndpoint(value) {
 
 export function requestPayload(formData, language) {
   const text = (name, max) => String(formData.get(name) || '').trim().slice(0, max);
-  const services = { 'video-editing':'Video Editing', 'web-design':'Web Design', both:'Video Editing & Web Design', consultation:'Consultation' };
-  const service = services[text('service', 40)];
+  const service = text('service',40) === 'web-design' ? 'Web Design' : null;
+  const plans = { '':'To discuss', starter:'Starter Website', standard:'Standard Website', premium:'Premium Static Website' };
+  const planId = text('plan',40);
+  if(!Object.hasOwn(plans,planId))throw new Error('invalid');
   const name = text('name',100), email = text('email',254), message = text('message',5000);
   if (!service || !name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || message.length < 20 || formData.get('consent') !== 'agreed') throw new Error('invalid');
-  return { name, email, service, company:text('company',150), budget:text('budget',150), timeline:text('timeline',150), message, references:text('references',2000), consent:'Agreed to request processing', language:language === 'en' ? 'English' : 'Japanese', subject:'Hoshimura Studio | '+service+' request' };
+  return { name, email, service, plan:plans[planId], company:text('company',150), budget:text('budget',150), timeline:text('timeline',150), message, references:text('references',2000), consent:'Agreed to request processing', language:language === 'en' ? 'English' : 'Japanese', subject:'Hoshimura Studio | '+service+' request' };
 }
 
 export async function sendRequest(endpoint, payload, {fetchImpl=fetch, signal}={}) {

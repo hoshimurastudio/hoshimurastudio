@@ -36,10 +36,23 @@ Object.assign(copy.en, {
   optionPage:'Extra page',optionAnimation:'Extra animations',optionMap:'Maps embed',optionForm:'Contact form',optionSeo:'Basic SEO setup',optionLanguages:'Japanese–English',optionRevision:'Additional revision',optionUpdate:'Minor content update',optionMaintenance:'Light maintenance',monthlyUnit:' / month',
   priceTermsTitle:'Before we begin',priceTermScope:'Scope, revision limits and delivery schedule are agreed before work begins.',priceTermExtras:'Domain, paid hosting and licensed assets are generally billed separately.',priceTermTax:'Included features are not charged twice. Tax treatment is confirmed separately.'
 });
+Object.assign(copy.en,{
+  navPrices:'Pricing',menuLabel:'Menu',webAvailable:'Website projects welcome',websiteOrder:'Discuss a website project',viewPrices:'Explore pricing',websiteService:'Website design',
+  websiteOnlyNotice:'We are currently accepting website projects only. Video editing is coming soon.',fieldPlan:'Preferred plan (optional)',planUndecided:'I’d like to discuss the options',
+  heroMeta:'A thoughtful home for your ideas.',headline:'Websites with<br><span class="accent">your character.</span>',lead:'A website that feels like you.<br>Turn your ideas into a clear, considered experience.',focusLine:'WEB DESIGN / VIDEO EDITING COMING SOON',
+  servicesTitle:'Bring your ideas<br>to the web.',servicesIntro:'Currently focused on website design.<br>Thoughtful creative work, shaped around your ideas.',
+  videoDesc:'Our video editing service is being prepared. Video editing requests are not being accepted yet.',
+  aboutDesc:'Hoshimura Studio is a creative studio currently focused on website design. We care about the heart of your message and give it a simple, memorable expression. Our video editing service is coming soon.',profileFields:'Website design / Video editing coming soon',
+  portfolioTeaserDesc:'Our website projects will be collected here. The portfolio is being prepared.',portfolioIntro:'A collection of website design work.<br>Projects will be added here as they are ready.',videoEmptyDesc:'Video editing is coming soon. Requests are not being accepted yet.',
+  requestIntro:'We are currently accepting website design inquiries and project requests. Share your idea, even if you are still exploring the possibilities.',messageHint:'Tell us about your website’s goal, pages, features, and visual direction (20–5,000 characters).',referencesHint:'Links to reference websites or shared folders. Direct file uploads are not supported.',
+  homeContactTitle:'Let’s talk about<br>your website.',homeContactDesc:'Tell us about your project and budget using our dedicated request form.'
+});
 const page=document.body?.dataset.page||'home';
 const metadata={
-  home:{ja:['Hoshimura Studio | 映像編集・Webデザイン','Hoshimura Studio — 映像編集とWebデザインで、アイデアをかたちに。'],en:['Hoshimura Studio | Video Editing & Web Design','Hoshimura Studio — thoughtful video editing and web design to bring your ideas to life.']},
-  portfolio:{ja:['ポートフォリオ | Hoshimura Studio','Hoshimura Studioの映像編集・ウェブデザインのポートフォリオ。制作事例は準備中です。'],en:['Portfolio | Hoshimura Studio','Video editing and web design portfolio by Hoshimura Studio. Projects are coming soon.']}
+  home:{ja:['Hoshimura Studio | ウェブサイト制作','Hoshimura Studio — あなたらしさが伝わるウェブサイトを制作します。映像編集サービスは準備中です。'],en:['Hoshimura Studio | Website Design','Thoughtful website design by Hoshimura Studio. Video editing is coming soon.']},
+  portfolio:{ja:['ポートフォリオ | Hoshimura Studio','Hoshimura Studioのウェブサイト制作ポートフォリオ。制作事例は準備中です。'],en:['Portfolio | Hoshimura Studio','Website design portfolio by Hoshimura Studio. Projects are coming soon.']},
+  pricing:{ja:['料金 | Hoshimura Studio','Hoshimura Studioのウェブサイト制作料金。プラン・追加オプション・PDF料金表をご案内します。'],en:['Pricing | Hoshimura Studio','Website design packages, optional services, and a downloadable Japanese–English price guide.']},
+  contact:{ja:['お問い合わせ | Hoshimura Studio','Hoshimura Studioのウェブサイト制作ご相談フォーム。ご希望のプランや制作内容をお聞かせください。'],en:['Contact | Hoshimura Studio','Tell Hoshimura Studio about your website project, preferred plan, budget and timeline.']}
 };
 document.querySelectorAll('[data-i18n]').forEach(el=>copy.ja[el.dataset.i18n]=el.innerHTML);
 let language='ja';
