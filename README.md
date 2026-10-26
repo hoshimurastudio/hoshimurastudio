@@ -31,11 +31,25 @@ npm run check
 - `dist/index.html`: struktur halaman dan teks Jepang.
 - `dist/portfolio.html`: halaman portofolio dengan kategori Video Editing dan Web Design. Kedua kategori sengaja kosong sampai karya siap dipublikasikan.
 - `dist/app.js`: teks English serta pengaturan bahasa dan tema.
+- `dist/contact.js` dan `dist/contact-api.js`: validasi, pengiriman form, dan status pengiriman.
+- `dist/contact-config.js`: endpoint publik Formspree. Email penerima diatur hanya di dashboard Formspree.
 - `dist/style.css`: tampilan, responsivitas, dan pemotongan logo.
 - `dist/assets/`: logo PNG asli yang Anda berikan.
 - `server.mjs`: server preview lokal tanpa dependency.
 
-Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Kontak masih diberi status segera hadir. Isi bagian `.contact` saat informasinya tersedia; perbarui teks Jepang dan English bersamaan. Font Google menggunakan internet; jika offline, browser memakai font sistem.
+Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Form pemesanan berada di `index.html#contact`. Font Google menggunakan internet; jika offline, browser memakai font sistem.
+
+## Form permintaan jasa
+
+Form meminta jenis jasa, nama dan email klien, perusahaan/nama kreator, anggaran, target waktu, rincian proyek, dan tautan referensi. Klien menyetujui pemakaian data untuk menangani permintaan. Tidak ada pembayaran atau kontrak otomatis.
+
+Pengiriman menggunakan endpoint Formspree di `dist/contact-config.js`. Endpoint tersebut merupakan ID form publik, bukan email penerima atau API key rahasia. Alamat email penerima tidak dimasukkan ke source. Atur dan verifikasi alamat penerima di dashboard Formspree; kolom `email` dari klien menjadi alamat Reply-To untuk membalas permintaan.
+
+Form dinonaktifkan jika endpoint belum diatur atau tidak valid. Setelah Formspree mengonfirmasi penerimaan, form menampilkan pesan berhasil dan mengosongkan isian. Bila terjadi kegagalan, batas pengiriman, atau timeout, isian tetap ada dan tidak ada klaim email berhasil dikirim. Penerimaan oleh Formspree tidak menjamin email masuk ke inbox; periksa folder spam dan dashboard bila notifikasi tidak terlihat.
+
+Atur filter spam dan pembatasan domain pada akun Formspree sesuai domain website yang aktif. Periksa kuota paket Formspree untuk jumlah permintaan per bulan. Form ini tidak menerima upload file langsung; klien dapat memberikan tautan berbagi. Jangan menaruh password, private API key, atau email penerima di file konfigurasi publik. Tidak ada password Gmail atau akses ke inbox yang diperlukan.
+
+Referensi: [Formspree contact forms](https://formspree.io/library/contact/contact-me-form/), [Reply-To](https://help.formspree.io/articles/building-your-form/email-reply-to-address), [Plans](https://formspree.io/plans).
 
 ## Masukkan ke repository GitHub
 

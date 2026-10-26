@@ -12,7 +12,19 @@ Object.assign(copy.en, {
   webEmptyTitle:'Web projects are on their way.', webEmptyDesc:'There are no published web projects yet.',
   emptyStatus:'Coming soon', backHome:'Back to the studio',
   channelDesc:'Visit the official Hoshimura Studio YouTube channel to explore the studio on screen.',
-  channelVisit:'Visit our YouTube channel', newTab:'Opens in a new tab'
+  channelVisit:'Visit our YouTube channel', newTab:'Opens in a new tab',
+  navContact:'Contact', contactCta:'Discuss your project', requestLabel:'LET’S WORK TOGETHER', requestTitle:'Tell us what<br>you have in mind.',
+  requestIntro:'Looking for video editing or web design? Share your idea with us, even if you are still exploring the possibilities.',
+  requestStep1:'Send us your project details', requestStep2:'We review your request and reply by email', requestStep3:'Discuss the scope and an estimate',
+  requestNote:'Submitting this form does not create a contract or require payment. Pricing and timing will be discussed after reviewing your request.',
+  requestFormTitle:'About your project', requiredNote:'* Required fields',
+  fieldService:'Service',serviceChoose:'Select a service',serviceVideo:'Video editing',serviceWeb:'Web design',serviceBoth:'Video editing & web design',serviceConsultation:'I’d like to discuss an idea',
+  fieldName:'Your name',fieldEmail:'Your email address',emailHint:'We will use this address to reply to your request.',
+  fieldCompany:'Company / creator name (optional)',fieldBudget:'Estimated budget (optional)',budgetHint:'Include the currency. It is fine if your budget is not decided yet.',
+  fieldTimeline:'Preferred timeline (optional)',timelineHint:'Share a target date, or let us know you would like to discuss it.',
+  fieldMessage:'Project details',messageHint:'Tell us about your goal, video length or website scope, and the help you need (20–5,000 characters).',
+  fieldReferences:'Reference URLs / shared files (optional)',referencesHint:'Links to reference sites, videos, or shared folders. Direct file uploads are not supported.',
+  fieldConsent:'I agree that my details will be sent through Formspree and used by Hoshimura Studio to review and reply to this request.'
 });
 const page=document.body?.dataset.page||'home';
 const metadata={
@@ -28,4 +40,5 @@ function setLanguage(lang){language=lang==='en'?'en':'ja';document.documentEleme
 document.querySelectorAll('[data-lang]').forEach(el=>el.addEventListener('click',()=>setLanguage(el.dataset.lang)));
 document.getElementById('theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;save('hoshimura-theme',theme);themeLabel()});
 setLanguage(read('hoshimura-language')||'ja');
+
 document.getElementById('year').textContent=new Date().getFullYear();
