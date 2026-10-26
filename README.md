@@ -35,6 +35,7 @@ npm run check
 - `dist/contact-config.js`: endpoint publik Formspree. Email penerima diatur hanya di dashboard Formspree.
 - `dist/style.css`: tampilan, responsivitas, dan pemotongan logo.
 - `dist/assets/`: logo PNG asli yang Anda berikan.
+- `dist/assets/documents/Hoshimura_Studio_Price_List_JP_EN.pdf`: PDF harga asli dari pemilik, tanpa perubahan isi. Harga paket, jenis website, opsi, dan ketentuan ditampilkan pada `index.html#pricing` dalam bahasa Jepang/Inggris. Angka adalah estimasi JPY dari panduan Oktober 2026.
 - `server.mjs`: server preview lokal tanpa dependency.
 
 Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Form pemesanan berada di `index.html#contact`. Font Google menggunakan internet; jika offline, browser memakai font sistem.

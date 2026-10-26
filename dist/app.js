@@ -24,7 +24,17 @@ Object.assign(copy.en, {
   fieldTimeline:'Preferred timeline (optional)',timelineHint:'Share a target date, or let us know you would like to discuss it.',
   fieldMessage:'Project details',messageHint:'Tell us about your goal, video length or website scope, and the help you need (20–5,000 characters).',
   fieldReferences:'Reference URLs / shared files (optional)',referencesHint:'Links to reference sites, videos, or shared folders. Direct file uploads are not supported.',
-  fieldConsent:'I agree that my details will be sent through Formspree and used by Hoshimura Studio to review and reply to this request.'
+  fieldConsent:'I agree that my details will be sent through Formspree and used by Hoshimura Studio to review and reply to this request.',
+  pricingTitle:'Web design pricing.', pricingIntro:'Introductory pricing / October 2026. All prices are in Japanese yen (JPY). Final pricing is based on your project requirements.',
+  downloadPrices:'Download the price guide',pricePdfNote:'PDF / Japanese & English / 2 pages',
+  starterDescription:'Simple landing page',starterPages:'1 page with 3–5 sections',starterResponsive:'Responsive mobile & desktop',starterContact:'Social & contact links',starterRevisions:'1 revision round',
+  standardDescription:'Business & portfolio',standardPages:'1 long page or up to 3 simple pages',standardDesign:'Custom layout & portfolio',standardContact:'Basic SEO & contact option',standardRevisions:'2 revision rounds',
+  premiumDescription:'Creative business website',premiumPages:'4–6 static pages',premiumDesign:'Custom design & subtle animation',premiumContact:'Gallery, form & basic SEO',premiumRevisions:'3 revision rounds',
+  planContact:'Discuss this plan',priceEstimate:'Prices are estimates and subject to a project-specific quotation.',
+  websiteTypesTitle:'Pricing by website type',optionsTitle:'Optional services',priceType:'Website type',priceOption:'Option',priceAmount:'Estimated price (JPY)',
+  typePersonal:'Personal profile',typePortfolio:'Portfolio',typeLanding:'Landing page',typeCafe:'Cafe & restaurant',typeSalon:'Salon & beauty',typeBusiness:'Small business',typeCompany:'Company profile (4–6 pages)',typeEvent:'Event & promotion',typeRedesign:'Simple redesign',
+  optionPage:'Extra page',optionAnimation:'Extra animations',optionMap:'Maps embed',optionForm:'Contact form',optionSeo:'Basic SEO setup',optionLanguages:'Japanese–English',optionRevision:'Additional revision',optionUpdate:'Minor content update',optionMaintenance:'Light maintenance',monthlyUnit:' / month',
+  priceTermsTitle:'Before we begin',priceTermScope:'Scope, revision limits and delivery schedule are agreed before work begins.',priceTermExtras:'Domain, paid hosting and licensed assets are generally billed separately.',priceTermTax:'Included features are not charged twice. Tax treatment is confirmed separately.'
 });
 const page=document.body?.dataset.page||'home';
 const metadata={
