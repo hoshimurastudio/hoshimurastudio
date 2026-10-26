@@ -29,12 +29,13 @@ npm run check
 ## Struktur dan pengeditan
 
 - `dist/index.html`: struktur halaman dan teks Jepang.
+- `dist/portfolio.html`: halaman portofolio dengan kategori Video Editing dan Web Design. Kedua kategori sengaja kosong sampai karya siap dipublikasikan.
 - `dist/app.js`: teks English serta pengaturan bahasa dan tema.
 - `dist/style.css`: tampilan, responsivitas, dan pemotongan logo.
 - `dist/assets/`: logo PNG asli yang Anda berikan.
 - `server.mjs`: server preview lokal tanpa dependency.
 
-Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. YouTube dan kontak masih diberi status segera hadir. Ganti `.pending` dengan tautan channel resmi dan isi bagian `.contact` saat informasinya sudah tersedia; perbarui teks Jepang dan English bersamaan. Font Google menggunakan internet; jika offline, browser memakai font sistem.
+Visual pada kartu jasa merupakan ilustrasi, bukan klaim portofolio. Link channel resmi YouTube sudah aktif: https://www.youtube.com/@HoshimuraStudio. Kontak masih diberi status segera hadir. Isi bagian `.contact` saat informasinya tersedia; perbarui teks Jepang dan English bersamaan. Font Google menggunakan internet; jika offline, browser memakai font sistem.
 
 ## Masukkan ke repository GitHub
 
