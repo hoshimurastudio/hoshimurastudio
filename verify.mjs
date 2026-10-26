@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const js=fs.readFileSync('dist/app.js','utf8');
-for(const filename of ['index.html','pricing.html','portfolio.html','contact.html']){
+for(const filename of ['index.html','pricing.html','portfolio.html','contact.html','why-us.html']){
 const html=fs.readFileSync('dist/'+filename,'utf8');
 const keys=[...html.matchAll(/data-i18n="([^"]+)"/g)].map(m=>m[1]);
 function element(dataset={}){return {dataset,innerHTML:'Japanese',textContent:'',content:'',attrs:{},setAttribute(k,v){this.attrs[k]=v},classList:{toggle(){}},addEventListener(k,v){this[k]=v}}}
@@ -23,6 +23,7 @@ if(filename==='portfolio.html')assert.match(items.find(x=>x.dataset.i18n==='port
 if(filename==='portfolio.html')assert.equal(doc.title,'Portfolio | Hoshimura Studio');
 if(filename==='pricing.html')assert.equal(doc.title,'Pricing | Hoshimura Studio');
 if(filename==='contact.html')assert.equal(doc.title,'Contact | Hoshimura Studio');
+if(filename==='why-us.html')assert.equal(doc.title,'Why Choose Us | Hoshimura Studio');
 theme.click();assert.equal(doc.documentElement.dataset.theme,'light');assert.equal(storage.get('hoshimura-theme'),'light');assert.equal(theme.attrs['aria-label'],'Switch to dark mode');
 langs[0].click();assert.equal(doc.documentElement.lang,'ja');assert.equal(langs[0].attrs['aria-pressed'],'true');assert.equal(theme.attrs['aria-label'],'ダークモードに切り替える');
 theme.click();assert.equal(doc.documentElement.dataset.theme,'dark');

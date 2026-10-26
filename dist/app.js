@@ -47,12 +47,26 @@ Object.assign(copy.en,{
   requestIntro:'We are currently accepting website design inquiries and project requests. Share your idea, even if you are still exploring the possibilities.',messageHint:'Tell us about your website’s goal, pages, features, and visual direction (20–5,000 characters).',referencesHint:'Links to reference websites or shared folders. Direct file uploads are not supported.',
   homeContactTitle:'Let’s talk about<br>your website.',homeContactDesc:'Tell us about your project and budget using our dedicated request form.'
 });
+Object.assign(copy.en,{
+  navWhy:'Why choose us',whyExplore:'Why Hoshimura Studio',whyTeaserTitle:'A website partner.<br>Beyond the launch.',whyTeaserDesc:'From a new website to ongoing updates, improvements and maintenance. We help your website keep pace with your work and business.',
+  whyTitle:'Launch is just<br><span class="accent">the beginning.</span>',whyLead:'We build your website. Then help you take it further.<br>As your work and business evolve, your website can evolve with them.',
+  journeyCreate:'Create',journeyGrow:'Grow',journeyCare:'Maintain',journeyRefresh:'Refresh',whyReasonsTitle:'Thinking about your next chapter, too.',
+  reasonCreateTitle:'Start from zero. Make it yours.',reasonCreateBody:'We work with you to clarify your message and audience. From structure to visual design, your website is shaped around your goals and brand character.',
+  reasonGrowTitle:'A website that grows with you.',reasonGrowBody:'New services, a change in direction, or something new to share. After launch, we help you take the next step through content improvements, page updates and additional website work.',
+  reasonCareTitle:'Support for updates and maintenance.',reasonCareBody:'Refreshing text and images, keeping information current, and reviewing presentation and usability. Whether we built your website or you already have one, we review its setup and discuss the support you need.',
+  reasonDesignTitle:'A current perspective. Your character.',reasonDesignBody:'We bring a contemporary visual sensibility to your website while respecting your brand and usability. A thoughtful balance of artistic expression and clear communication.',
+  audienceTitle:'Every size. Every field.<br>Start with your idea.',audienceBody:'From individuals and local shops to companies. Whether you need your first website or want to improve an existing one, we welcome a conversation around your goals and budget.',audiencePersonal:'Individuals & creators',audienceFreelance:'Freelancers',audienceShop:'Shops & service businesses',audienceCompany:'Companies & business owners',
+  existingTitle:'Already have a website?<br>Let’s shape what’s next.',existingBody:'Need to update content, refresh a design, or discuss maintenance? Share your website URL and what you would like to change through our form. We review its structure and setup before agreeing on the work.',
+  supportContact:'Discuss your website & updates',supportScope:'The scope, duration and fees for updates, maintenance and additional work are agreed individually. See our pricing page for reference rates.',
+  requestIntro:'For a new website, improvements to an existing site, or maintenance support, tell us about your goals and what you need.',referencesHint:'Your current website, reference sites, or shared folders. Direct file uploads are not supported.'
+});
 const page=document.body?.dataset.page||'home';
 const metadata={
   home:{ja:['Hoshimura Studio | ウェブサイト制作','Hoshimura Studio — あなたらしさが伝わるウェブサイトを制作します。映像編集サービスは準備中です。'],en:['Hoshimura Studio | Website Design','Thoughtful website design by Hoshimura Studio. Video editing is coming soon.']},
   portfolio:{ja:['ポートフォリオ | Hoshimura Studio','Hoshimura Studioのウェブサイト制作ポートフォリオ。制作事例は準備中です。'],en:['Portfolio | Hoshimura Studio','Website design portfolio by Hoshimura Studio. Projects are coming soon.']},
   pricing:{ja:['料金 | Hoshimura Studio','Hoshimura Studioのウェブサイト制作料金。プラン・追加オプション・PDF料金表をご案内します。'],en:['Pricing | Hoshimura Studio','Website design packages, optional services, and a downloadable Japanese–English price guide.']},
-  contact:{ja:['お問い合わせ | Hoshimura Studio','Hoshimura Studioのウェブサイト制作ご相談フォーム。ご希望のプランや制作内容をお聞かせください。'],en:['Contact | Hoshimura Studio','Tell Hoshimura Studio about your website project, preferred plan, budget and timeline.']}
+  contact:{ja:['お問い合わせ | Hoshimura Studio','Hoshimura Studioのウェブサイト制作・更新・保守のご相談フォーム。ご希望をお聞かせください。'],en:['Contact | Hoshimura Studio','Discuss website design, updates and maintenance with Hoshimura Studio.']},
+  'why-us':{ja:['選ばれる理由 | Hoshimura Studio','新規制作から更新・改善・保守まで。Hoshimura Studioが、あなたの事業や活動とともに育つウェブサイトをサポートします。'],en:['Why Choose Us | Hoshimura Studio','Website design with support beyond launch: ongoing improvements, updates and maintenance for individuals and businesses.']}
 };
 document.querySelectorAll('[data-i18n]').forEach(el=>copy.ja[el.dataset.i18n]=el.innerHTML);
 let language='ja';

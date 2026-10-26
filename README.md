@@ -31,6 +31,7 @@ npm run check
 - `dist/index.html`: struktur halaman dan teks Jepang.
 - `dist/pricing.html`: halaman harga website, rincian opsi, dan unduhan PDF asli.
 - `dist/contact.html`: halaman form permintaan website, dengan pilihan paket opsional.
+- `dist/why-us.html`: alasan memilih studio, dukungan pengembangan/updates/maintenance, cakupan klien, dan pendekatan desain.
 - `dist/portfolio.html`: halaman portofolio dengan kategori Video Editing dan Web Design. Kedua kategori sengaja kosong sampai karya siap dipublikasikan.
 - `dist/app.js`: teks English serta pengaturan bahasa dan tema.
 - `dist/contact.js` dan `dist/contact-api.js`: validasi, pengiriman form, dan status pengiriman.
