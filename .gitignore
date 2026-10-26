@@ -1,0 +1,13 @@
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+!.env.example
+.openai/
+outputs/
+*.log
+*.tar.gz
+.DS_Store
+Thumbs.db

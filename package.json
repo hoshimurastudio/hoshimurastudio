@@ -1,0 +1,14 @@
+{
+  "name": "hoshimura-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hoshimura Studio — Japanese and English creative studio website",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "preview": "node server.mjs",
+    "check": "node --check dist/app.js && node verify.mjs"
+  }
+}
